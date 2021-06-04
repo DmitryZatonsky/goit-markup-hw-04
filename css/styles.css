@@ -1,0 +1,470 @@
+/* 
+Цвет текста:
+  #212121 - заголовки (h2, h3)
+  #757575 - основной серый (в .header-link, p)
+  #2196F3 - hover, Web
+  #FFFFFF - в .hero
+  #FFFFFF 60% - список контактов в футере
+
+Цвет фона:
+  #FFFFFF - основной
+  #2F303A - hero, футер
+  #F5F4FA - фон секции "наша команда"
+  
+*/
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --title-text-color-hero-footer: #ffffff;
+  --accent-color: #2196f3;
+  --background-color-hero-footer: #2f303a;
+  --primary-white-color: #ffffff;
+  --button-primary-background: #f5f4fa;
+  --button-hover: #188ce8;
+  --background-color-hero: #c4c4c4;
+  /* --gallery-works-number-of-cards-per-line: 3;
+  --gallery-works-margin-per-line: 30px; */
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+
+  color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+/* ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}*/
+
+.list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+/* Навигация */
+
+.site {
+  display: flex;
+  align-items: center;
+}
+
+/* logo */
+
+.logo {
+  margin-right: 93px;
+
+  font-family: Raleway, sans-serif;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-header {
+  color: #000000;
+}
+
+.site-nav {
+  display: flex;
+}
+
+.site-nav .item:not(:last-child) {
+  /*отступ справа кроме последнего элемента*/
+  margin-right: 50px;
+}
+
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  text-decoration: none;
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.site-contacts .link:hover,
+.site-contacts .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+.site-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.site-contacts .item + .item {
+  /*отступ слева у последующего соседа*/
+  margin-left: 50px;
+}
+
+.site-contacts .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  text-decoration: none;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Hero */
+
+.hero {
+  padding-top: 200px;
+  background-color: var(--background-color-hero);
+  text-align: center;
+}
+
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 30;
+  color: var(--title-text-color-hero-footer);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Button */
+
+.hero .button {
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px;
+  margin-bottom: 200px;
+  border-style: none;
+  border-radius: 4px;
+  color: var(--title-text-color-hero-footer);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+}
+
+/* section */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section-title,
+.footer .title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.section-title .heading {
+  color: var(--title-text-color);
+}
+
+/* Особенности */
+
+.feature {
+  display: flex;
+}
+
+.feature .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.feature .heading {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.feature .paragraph {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+/* Работы */
+
+.section-work {
+  padding-top: 0;
+}
+
+.work {
+  display: flex;
+}
+
+.section-work .section-title {
+  margin-bottom: 50px;
+}
+
+.work .heading {
+  margin-bottom: 30px;
+  color: var(--title-text-color);
+}
+
+.work .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.work .item img {
+  display: block;
+}
+
+/* Наша команда */
+
+.our-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--button-primary-background);
+}
+.our-team .section-title {
+  margin-bottom: 50px;
+}
+
+.our-team-list {
+  display: flex;
+}
+
+.our-team-list .item {
+  background: #ffffff;
+  /* material shadow v1 */
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.our-team-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.our-team .cards {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.our-team .img {
+  margin-bottom: 30px;
+}
+
+.our-team .heading {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.our-team .paragraph {
+  margin: 0;
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+/* Футер */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--background-color-hero-footer);
+}
+
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.logo-footer {
+  color: var(--title-text-color-hero-footer);
+}
+
+.contacts {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.contacts-text {
+  margin: 0;
+  color: var(--title-text-color-hero-footer);
+}
+
+.footer-contacts .link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-contacts .link:hover,
+.footer-contacts .link:focus {
+  color: var(--accent-color);
+}
+
+/* Портфолио .html*/
+
+.filter-decoration {
+  margin-bottom: 50px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+}
+
+.filter .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter .button {
+  display: inline-block;
+  padding: 6px 22px;
+  border-radius: 4px;
+  color: var(--title-text-color);
+  background-color: var(--button-primary-background);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  cursor: pointer;
+}
+
+.filter .button:hover,
+.filter .button:focus {
+  color: var(--title-text-color-hero-footer);
+  background-color: var(--accent-color);
+}
+
+.gallery-works-decoration {
+  padding: 94px 0;
+}
+
+.gallery-works {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-works .card-list {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.card-list .decoration {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.card-list:nth-child(3n) {
+  margin-right: 0;
+}
+
+.card-list:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.card-list img {
+  display: block;
+}
+
+.gallery-works .heading {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.gallery-works .paragraph {
+  margin-top: 0;
+  margin-bottom: 0px;
+
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+.gallery-works a {
+  text-decoration: none;
+}
+
+/* Прибить заголовки вне макета (списал на GitHab у Саньки Репеты)*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
