@@ -73,7 +73,9 @@ h6 {
   border-bottom: 1px solid #ececec;
 }
 
-/* Навигация */
+/*================= SVG =================*/
+
+/*================= Навигация =================*/
 
 .site {
   display: flex;
@@ -152,7 +154,7 @@ h6 {
   letter-spacing: 0.02em;
 }
 
-/* Hero */
+/*================= Hero =================*/
 
 .hero {
   max-width: 1600px;
@@ -183,7 +185,7 @@ h6 {
   text-transform: uppercase;
 }
 
-/* Button */
+/*================= Button =================*/
 
 .hero .button {
   min-width: 200px;
@@ -203,7 +205,7 @@ h6 {
   background-color: var(--button-hover);
 }
 
-/* section */
+/*================= section =================*/
 
 .section {
   padding-top: 94px;
@@ -225,7 +227,7 @@ h6 {
   color: var(--title-text-color);
 }
 
-/* Особенности */
+/*================= Особенности =================*/
 
 .feature {
   display: flex;
@@ -234,6 +236,45 @@ h6 {
 .feature .item:not(:last-child) {
   margin-right: 30px;
 }
+
+.feature-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: inherit;
+  height: 120px;
+
+  border-radius: 4px;
+  background-color: var(--button-primary-background);
+}
+
+/* .feature > .item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feature > .item:nth-child(1)::before {
+  background-image: url('../images/feature/antenna.png');
+}
+
+.feature > .item:nth-child(2)::before {
+  background-image: url('../images/feature/clock.png');
+}
+
+.feature > .item:nth-child(3)::before {
+  background-image: url('../images/feature/diagram.png');
+}
+
+.feature > .item:nth-child(4)::before {
+  background-image: url('../images/feature/astronaut.png');
+} */
 
 .feature .heading {
   margin-top: 0;
@@ -252,7 +293,7 @@ h6 {
   line-height: 1.71;
 }
 
-/* Работы */
+/*================= Работы =================*/
 
 .section-work {
   padding-top: 0;
@@ -279,7 +320,7 @@ h6 {
   display: block;
 }
 
-/* Наша команда */
+/*================= Наша команда =================*/
 
 .our-team {
   padding-top: 94px;
@@ -333,7 +374,86 @@ h6 {
   line-height: 1.19;
 }
 
-/* Футер */
+.our-team-social-list {
+  display: flex;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.our-team-social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+}
+
+.our-team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.our-team-social-link {
+  display: flex;
+  width: inherit;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+  fill: #afb1b8;
+  border-radius: 50%;
+}
+
+.our-team-social-link:hover,
+.our-team-social-link:focus {
+  background-color: var(--accent-color);
+  fill: #ffffff;
+}
+
+/*=============== customers =================*/
+
+.customers .customers-title {
+  padding-bottom: 50px;
+}
+
+.customers-list {
+  display: flex;
+}
+
+.customers-item {
+  width: calc((100%-30px) / 6);
+  height: 92px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.customers-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.customers-link {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+}
+
+.customers-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  fill: #afb1b8;
+}
+
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
+  fill: var(--accent-color);
+}
+
+/*================= Футер =================*/
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -342,18 +462,49 @@ h6 {
 
 .footer-decoration {
   display: flex;
+  align-items: center;
 }
 
 .footer-contacts {
   margin-right: 70px;
 }
 
-.footer-social {
-  padding-top: 12px;
+.footer-social-list {
+  display: flex;
+  margin-top: 20px;
 }
 
-.footer-social .social-title {
-  margin-bottom: 20px;
+.footer-social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-link {
+  display: flex;
+  width: inherit;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-icon {
+  fill: #ffffff;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+  border-radius: 50%;
 }
 
 .footer .logo {
@@ -387,7 +538,7 @@ h6 {
   color: var(--accent-color);
 }
 
-/* Портфолио .html*/
+/*================= Портфолио .html=================*/
 
 .filter-decoration {
   margin-bottom: 50px;
@@ -481,6 +632,14 @@ h6 {
 
 .gallery-works a {
   text-decoration: none;
+}
+
+.footer-social b {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 /* Прибить заголовки вне макета (списал на GitHab у Саньки Репеты)*/
