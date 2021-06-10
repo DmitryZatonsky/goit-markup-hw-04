@@ -125,6 +125,7 @@ h6 {
 .site-contacts .link:hover,
 .site-contacts .link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .site-nav .link.current {
@@ -142,7 +143,7 @@ h6 {
 }
 
 .site-contacts .link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -152,6 +153,14 @@ h6 {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.site-contacts-icon {
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 /*================= Hero =================*/
@@ -419,11 +428,10 @@ h6 {
 }
 
 .customers-item {
-  width: calc((100%-30px) / 6);
-  height: 92px;
-
   justify-content: center;
   align-items: center;
+  width: calc((100%-30px) / 6);
+  height: 92px;
 }
 
 .customers-item:not(:last-child) {
@@ -431,12 +439,13 @@ h6 {
 }
 
 .customers-link {
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
   display: flex;
-  height: 90px;
   align-items: center;
   justify-content: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  height: 90px;
+  fill: #afb1b8;
 }
 
 .customers-icon {
@@ -444,12 +453,12 @@ h6 {
   align-items: center;
   justify-content: center;
   height: inherit;
-  fill: #afb1b8;
 }
 
-.customers-link:hover .customers-icon,
-.customers-link:focus .customers-icon {
+.customers-link:hover,
+.customers-link:focus {
   fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /*================= Футер =================*/
@@ -570,6 +579,8 @@ h6 {
 .filter .button:focus {
   color: var(--title-text-color-hero-footer);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .gallery-works-decoration {
@@ -595,6 +606,11 @@ h6 {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+}
+
+.card-list:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-list:nth-child(3n) {
