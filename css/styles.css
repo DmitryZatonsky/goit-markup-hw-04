@@ -606,16 +606,6 @@ h6 {
   margin-bottom: 30px;
 }
 
-.card-list .decoration {
-  padding-top: 20px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-}
-
 .card-list:nth-child(3n) {
   margin-right: 0;
 }
@@ -625,11 +615,10 @@ h6 {
 }
 
 .card-list-link {
-  width: inherit;
-  height: inherit;
+  display: block;
 }
 
-.card-list-link:hover,
+.card-list:hover,
 .card-list-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -637,6 +626,16 @@ h6 {
 
 .card-list img {
   display: block;
+}
+
+.card-list .decoration {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .gallery-works .heading {
