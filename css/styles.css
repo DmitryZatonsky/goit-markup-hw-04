@@ -191,21 +191,26 @@ h6 {
 
 /*================= Button =================*/
 
-.hero .button {
-  min-width: 200px;
-  min-height: 50px;
-  padding: 10px;
-  margin-bottom: 200px;
+.button {
   border-style: none;
-  border-radius: 4px;
-  color: var(--title-text-color-hero-footer);
-  background-color: var(--accent-color);
   font-family: inherit;
   text-decoration: none;
   cursor: pointer;
 }
 
-.button:hover {
+.hero .button {
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px;
+  margin-bottom: 200px;
+
+  border-radius: 4px;
+  color: var(--title-text-color-hero-footer);
+  background-color: var(--accent-color);
+}
+
+.button:hover,
+.button:focus {
   background-color: var(--button-hover);
 }
 
@@ -553,7 +558,7 @@ h6 {
   justify-content: center;
 }
 
-.filter .item:not(:last-child) {
+.filter-item:not(:last-child) {
   margin-right: 8px;
 }
 
