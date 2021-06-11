@@ -537,6 +537,14 @@ h6 {
   color: var(--title-text-color-hero-footer);
 }
 
+.footer-social b {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 .footer-contacts .link {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
@@ -600,18 +608,12 @@ h6 {
 
 .card-list .decoration {
   padding-top: 20px;
-  padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 20px;
+  padding-left: 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-}
-
-.card-list:hover,
-.card-list:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-list:nth-child(3n) {
@@ -620,6 +622,17 @@ h6 {
 
 .card-list:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.card-list-link {
+  width: inherit;
+  height: inherit;
+}
+
+.card-list-link:hover,
+.card-list-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-list img {
@@ -649,14 +662,6 @@ h6 {
 
 .gallery-works a {
   text-decoration: none;
-}
-
-.footer-social b {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  text-transform: uppercase;
-  color: #ffffff;
 }
 
 /* Прибить заголовки вне макета (списал на GitHab у Саньки Репеты)*/
