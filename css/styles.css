@@ -61,6 +61,13 @@ h6 {
   padding-right: 15px;
 }
 
+.button {
+  border-style: none;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .header {
   border-bottom: 1px solid var(--header-color-border);
 }
@@ -162,6 +169,7 @@ h6 {
   margin-left: auto;
   margin-right: auto;
   padding-top: 200px;
+  padding-bottom: 200px;
 
   background-color: var(--background-color-hero);
   background-image: linear-gradient(
@@ -189,20 +197,12 @@ h6 {
   text-transform: uppercase;
 }
 
-/*================= Button =================*/
-
-.button {
-  border-style: none;
-  font-family: inherit;
-  text-decoration: none;
-  cursor: pointer;
-}
+/*================= Hero Button =================*/
 
 .hero .button {
   min-width: 200px;
   min-height: 50px;
   padding: 10px;
-  margin-bottom: 200px;
 
   border-radius: 4px;
   color: var(--title-text-color-hero-footer);
@@ -471,7 +471,7 @@ h6 {
 
 .footer-decoration {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .footer-contacts {
