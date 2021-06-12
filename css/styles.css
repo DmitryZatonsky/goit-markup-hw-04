@@ -16,6 +16,8 @@
   --primary-white-color: #ffffff;
   --button-primary-background: #f5f4fa;
   --button-hover: #188ce8;
+  --background-color-modal: rgba(0, 0, 0, 0.2);
+  --background-paragraph-back-side: rgba(33, 150, 243, 0.9);
 }
 html {
   box-sizing: border-box;
@@ -134,15 +136,15 @@ h6 {
 .site-nav .link.current::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   display: block;
   width: 100%;
-  height: 4px;
+  height: 0;
 
-  border: solid var(--accent-color);
-  border-radius: 2px;
+  border: 2px solid var(--accent-color);
+  border-radius: 4px;
 }
 
 .site-contacts {
@@ -611,6 +613,8 @@ h6 {
   color: var(--title-text-color-hero-footer);
 }
 
+/*================= Карточки =================*/
+
 .gallery-works-decoration {
   padding: 94px 0;
 }
@@ -644,8 +648,42 @@ h6 {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.card-list img {
+.card-list-link {
+  text-decoration: none;
+}
+
+.card-back-side {
   display: block;
+  position: relative;
+}
+
+.card-img {
+  display: block;
+}
+
+.paragraph-back-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  font-size: 18px;
+  line-height: 1.556;
+  color: var(--primary-white-color);
+  opacity: 0;
+}
+
+.card-list:hover .paragraph-back-side {
+  background: var(--background-paragraph-back-side);
+  opacity: 1;
 }
 
 .card-list .decoration {
@@ -679,8 +717,54 @@ h6 {
   line-height: 1.87;
 }
 
-.gallery-works a {
-  text-decoration: none;
+/*================= Модалка =================*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-color-modal);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--primary-white-color);
+  border-radius: 4px;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  border-style: none;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--title-text-color-hero-footer);
+}
+
+.modal-icon-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Прибить заголовки вне макета (списал на GitHab у Саньки Репеты)*/
